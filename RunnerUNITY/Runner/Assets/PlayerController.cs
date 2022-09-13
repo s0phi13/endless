@@ -36,6 +36,10 @@ public class PlayerController : MonoBehaviour
             playerObject.AddForce(new Vector2(0.0f, 320.0f));
         }
 
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround == false)
+        {
+            playerObject.AddForce(new Vector2(0.0f, 300.0f));
+        }
 
     }
 }
