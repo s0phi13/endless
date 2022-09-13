@@ -6,12 +6,21 @@ public class PlayerController : MonoBehaviour
 {
   
     Rigidbody2D playerObject;
+    Vector3 jumpForce = new Vector3(0.0f,10.0f,0.0f);
 
-    // Start is called before the first frame update
+    bool isJumping = true;
+
+
     void Start()
     {
 
         playerObject = GetComponent<Rigidbody2D>();
+
+           if (isJumping == true)
+        {
+            playerObject.AddForce(jumpForce);
+
+        }
         
     }
 
@@ -19,7 +28,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-        float movementValueX = Inout.GetAxis("Horizontal");
+        float movementValueX = Input.GetAxis("Horizontal");
 
         playerObject.velocity = new Vector2 (movementValueX, playerObject.velocity.y);
 
