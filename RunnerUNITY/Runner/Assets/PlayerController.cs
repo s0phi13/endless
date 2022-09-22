@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-        float movementValueX = Input.GetAxis("Horizontal");
+        // float movementValueX = Input.GetAxis("Horizontal");
+          float movementValueX = 1.0f;
 
         playerObject.velocity = new Vector2 (movementValueX * maxSpeed, playerObject.velocity.y);
 
@@ -36,10 +37,12 @@ public class PlayerController : MonoBehaviour
             playerObject.AddForce(new Vector2(0.0f, 320.0f));
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround == false)
+       else if (Input.GetKeyDown(KeyCode.Space) && !isOnGround)
         {
             playerObject.AddForce(new Vector2(0.0f, 300.0f));
         }
 
+
+    
     }
 }
