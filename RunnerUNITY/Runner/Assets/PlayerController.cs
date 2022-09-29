@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     float maxSpeed = 5.0f;
     bool isOnGround = false;
+    bool doubleJump = true;
 
     Rigidbody2D playerObject;
   
@@ -21,7 +22,6 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -34,15 +34,41 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround == true)
         {
-            playerObject.AddForce(new Vector2(0.0f, 320.0f));
+         
+            Jump();
+            switch
+            {
+                doubleJump == true
+            }
+    
         }
-
-       else if (Input.GetKeyDown(KeyCode.Space) && !isOnGround)
+        else if (Input.GetKeyDown(KeyCode.Space) && !isOnGround)
         {
-            playerObject.AddForce(new Vector2(0.0f, 300.0f));
-        }
 
+            DoubleJump();
+        
+        }
+      
 
     
+    }
+
+    void Jump()
+    {
+        
+          playerObject.AddForce(new Vector2(0.0f, 320.0f));
+      
+
+    }
+
+    void DoubleJump()
+    {
+        if (doubleJump == true)
+         playerObject.AddForce(new Vector2(0.0f, 320.0f));
+      switch
+      {
+          doubleJump == false
+      }
+
     }
 }
