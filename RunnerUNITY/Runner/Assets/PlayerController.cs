@@ -36,10 +36,7 @@ public class PlayerController : MonoBehaviour
         {
          
             Jump();
-            switch
-            {
-                doubleJump == true
-            }
+           
     
         }
         else if (Input.GetKeyDown(KeyCode.Space) && !isOnGround)
@@ -55,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        
+        doubleJump = true;
           playerObject.AddForce(new Vector2(0.0f, 320.0f));
       
 
@@ -65,10 +62,10 @@ public class PlayerController : MonoBehaviour
     {
         if (doubleJump == true)
          playerObject.AddForce(new Vector2(0.0f, 320.0f));
-      switch
-      {
-          doubleJump == false
-      }
+        doubleJump = false;
 
     }
+
+
+
 }
