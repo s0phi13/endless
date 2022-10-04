@@ -45,8 +45,8 @@ public class PlayerController : MonoBehaviour
             DoubleJump();
         
         }
-      
-
+        
+       
     
     }
 
