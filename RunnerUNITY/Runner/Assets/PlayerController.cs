@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
   
     public GameObject groundChecker;
     public LayerMask whatIsGround;
+    public Animator anim;
 
     float maxSpeed = 5.0f;
     bool isOnGround = false;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
 
         playerObject = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         
     }
@@ -25,10 +27,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
+        
         // float movementValueX = Input.GetAxis("Horizontal");
           float movementValueX = 1.0f;
 
         playerObject.velocity = new Vector2 (movementValueX * maxSpeed, playerObject.velocity.y);
+
+        anim.SetFloat("Speed", Mathf.Abs(movementValueX));
+        anim.SetBool("IsOnGround", isOnGround);
 
         isOnGround = Physics2D.OverlapCircle(groundChecker.transform.position, 1.0f, whatIsGround);
 
