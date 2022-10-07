@@ -7,13 +7,14 @@ public class PlayerController : MonoBehaviour
   
     public GameObject groundChecker;
     public LayerMask whatIsGround;
-    public Animator anim;
+   
 
     float maxSpeed = 5.0f;
     bool isOnGround = false;
     bool doubleJump = true;
 
     Rigidbody2D playerObject;
+    Animator anim;
   
     void Start()
     {
@@ -33,8 +34,6 @@ public class PlayerController : MonoBehaviour
 
         playerObject.velocity = new Vector2 (movementValueX * maxSpeed, playerObject.velocity.y);
 
-        anim.SetFloat("Speed", Mathf.Abs(movementValueX));
-        anim.SetBool("IsOnGround", isOnGround);
 
         isOnGround = Physics2D.OverlapCircle(groundChecker.transform.position, 1.0f, whatIsGround);
 
@@ -51,6 +50,10 @@ public class PlayerController : MonoBehaviour
             DoubleJump();
         
         }
+
+        anim.SetFloat("Speed", Mathf.Abs(movementValueX));
+        anim.SetBool("IsOnGround", isOnGround);
+
         
        
     
