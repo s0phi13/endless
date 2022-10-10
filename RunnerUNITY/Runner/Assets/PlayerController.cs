@@ -7,6 +7,11 @@ public class PlayerController : MonoBehaviour
   
     public GameObject groundChecker;
     public LayerMask whatIsGround;
+    public AudioClip jump;
+    public AudioClip backgroundMusic;
+
+    public AudioSource sfxPlayer;
+    public AudioSource musicPlayer;
    
 
     float maxSpeed = 5.0f;
@@ -21,6 +26,10 @@ public class PlayerController : MonoBehaviour
 
         playerObject = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        musicPlayer.clip = backgroundMusic;
+        musicPlayer.loop = true;
+        musicPlayer.Play();
+       
 
         
     }
