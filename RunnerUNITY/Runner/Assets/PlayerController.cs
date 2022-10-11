@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
+          isOnGround = Physics2D.OverlapCircle(groundChecker.transform.position, 1.0f, whatIsGround);
         
         // float movementValueX = Input.GetAxis("Horizontal");
           float movementValueX = 1.0f;
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         playerObject.velocity = new Vector2 (movementValueX * maxSpeed, playerObject.velocity.y);
 
 
-        isOnGround = Physics2D.OverlapCircle(groundChecker.transform.position, 1.0f, whatIsGround);
+        
 
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround == true)
         {
