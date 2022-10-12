@@ -32,10 +32,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -50,6 +48,23 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/DeathScreen.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
     Assets/creditmenu.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -70,19 +85,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1484}
     - Class: 114
-      Script: {instanceID: 2286}
+      Script: {instanceID: 2428}
     - Class: 114
-      Script: {instanceID: 2714}
+      Script: {instanceID: 2856}
     - Class: 114
-      Script: {instanceID: 2892}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3126}
+      Script: {instanceID: 3268}
     - Class: 114
-      Script: {instanceID: 3376}
+      Script: {instanceID: 3518}
     - Class: 114
-      Script: {instanceID: 3504}
+      Script: {instanceID: 3646}
     - Class: 114
-      Script: {instanceID: 25938}
+      Script: {instanceID: 4664}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -121,29 +136,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1484}
     - Class: 114
-      Script: {instanceID: 1786}
+      Script: {instanceID: 1928}
     - Class: 114
-      Script: {instanceID: 1870}
+      Script: {instanceID: 2012}
     - Class: 114
-      Script: {instanceID: 2278}
+      Script: {instanceID: 2420}
     - Class: 114
-      Script: {instanceID: 2286}
+      Script: {instanceID: 2428}
     - Class: 114
-      Script: {instanceID: 2714}
+      Script: {instanceID: 2856}
     - Class: 114
-      Script: {instanceID: 2892}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3126}
+      Script: {instanceID: 3268}
     - Class: 114
-      Script: {instanceID: 3376}
+      Script: {instanceID: 3518}
     - Class: 114
-      Script: {instanceID: 3504}
+      Script: {instanceID: 3646}
     - Class: 114
-      Script: {instanceID: 4760}
+      Script: {instanceID: 4900}
     - Class: 114
-      Script: {instanceID: 4924}
+      Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 5332}
+      Script: {instanceID: 5472}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -202,15 +217,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2342}
+      Script: {instanceID: 2484}
     - Class: 114
-      Script: {instanceID: 2864}
+      Script: {instanceID: 3006}
     - Class: 114
-      Script: {instanceID: 4468}
+      Script: {instanceID: 4608}
     - Class: 114
-      Script: {instanceID: 4878}
+      Script: {instanceID: 5018}
     - Class: 114
-      Script: {instanceID: 5780}
+      Script: {instanceID: 5920}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -728,7 +743,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: dced5ebb7ef4503b14b9432af4d90c7b
+      Hash: 9ad2ab0aead10c62770e6c1e845ba1c6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -738,6 +753,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnvMapAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Credits
   - hash:
       serializedVersion: 2
       Hash: bd3f0ca738703903e759f77536ed74fd
@@ -972,15 +993,10 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Credits
   platform: 19
   scenePathNames:
   - Assets/gamemenue.unity
   - Assets/rooftoprunner.unity
   - Assets/creditmenu.unity
-  playerPath: C:/rooftop/Runner.exe
+  - Assets/DeathScreen.unity
+  playerPath: C:/rooftprunner/Runner.exe

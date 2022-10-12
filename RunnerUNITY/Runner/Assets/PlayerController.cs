@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour
 {
   
     public GameObject groundChecker;
+    public GameObject barrierChecker;
     public LayerMask whatIsGround;
     public AudioClip jump;
     public AudioClip backgroundMusic;
-
+    public LayerMask whatIsBarrier;
     public AudioSource sfxPlayer;
     public AudioSource musicPlayer;
    
@@ -17,9 +20,18 @@ public class PlayerController : MonoBehaviour
     float maxSpeed = 5.0f;
     bool isOnGround = false;
     bool doubleJump = true;
+    bool isOnBarrier = false;
 
     Rigidbody2D playerObject;
     Animator anim;
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+         if (collision.gameObject.tag == "Barrier")
+        {
+              SceneManager.LoadScene(0);
+        }
+    }
   
     void Start()
     {
@@ -36,14 +48,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-          isOnGround = Physics2D.OverlapCircle(groundChecker.transform.position, 1.0f, whatIsGround);
-        
+        isOnGround = Physics2D.OverlapCircle(groundChecker.transform.position, 1.0f, whatIsGround);
+        isOnBarrier = Physics2D.OverlapCircle(barrierChecker.transform.position, 1.0f, whatIsBarrier);
         // float movementValueX = Input.GetAxis("Horizontal");
           float movementValueX = 1.0f;
 
         playerObject.velocity = new Vector2 (movementValueX * maxSpeed, playerObject.velocity.y);
-
-
         
 
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround == true)
@@ -63,8 +73,7 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(movementValueX));
         anim.SetBool("IsOnGround", isOnGround);
 
-        
-       
+    
     
     }
 
