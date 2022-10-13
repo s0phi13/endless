@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
     {
          if (collision.gameObject.tag == "Barrier")
         {
-              SceneManager.LoadScene(0);
+              SceneManager.LoadScene(3
+            );
         }
     }
   

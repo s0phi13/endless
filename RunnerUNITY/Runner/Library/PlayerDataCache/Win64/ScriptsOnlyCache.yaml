@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraControl
     - Credits
+    - DeathScreen
     - Destroyer
     - MainMenu
     - Parallax
@@ -55,15 +56,47 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1484}
+    - Class: 114
+      Script: {instanceID: 2286}
+    - Class: 114
+      Script: {instanceID: 2714}
+    - Class: 114
+      Script: {instanceID: 2892}
+    - Class: 114
+      Script: {instanceID: 3126}
+    - Class: 114
+      Script: {instanceID: 3376}
+    - Class: 114
+      Script: {instanceID: 3504}
+    - Class: 114
+      Script: {instanceID: 17760}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/creditmenu.unity:
     - Class: 1
@@ -85,19 +118,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1484}
     - Class: 114
-      Script: {instanceID: 2424}
+      Script: {instanceID: 2286}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2714}
     - Class: 114
-      Script: {instanceID: 3030}
+      Script: {instanceID: 2892}
     - Class: 114
-      Script: {instanceID: 3264}
+      Script: {instanceID: 3126}
     - Class: 114
-      Script: {instanceID: 3514}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 3642}
+      Script: {instanceID: 3504}
     - Class: 114
-      Script: {instanceID: 4660}
+      Script: {instanceID: 4526}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -136,29 +169,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1484}
     - Class: 114
-      Script: {instanceID: 1924}
+      Script: {instanceID: 1786}
     - Class: 114
-      Script: {instanceID: 2008}
+      Script: {instanceID: 1870}
     - Class: 114
-      Script: {instanceID: 2416}
+      Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 2424}
+      Script: {instanceID: 2286}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2714}
     - Class: 114
-      Script: {instanceID: 3030}
+      Script: {instanceID: 2892}
     - Class: 114
-      Script: {instanceID: 3264}
+      Script: {instanceID: 3126}
     - Class: 114
-      Script: {instanceID: 3514}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 3642}
+      Script: {instanceID: 3504}
     - Class: 114
-      Script: {instanceID: 4896}
+      Script: {instanceID: 4762}
     - Class: 114
-      Script: {instanceID: 5060}
+      Script: {instanceID: 4926}
     - Class: 114
-      Script: {instanceID: 5468}
+      Script: {instanceID: 5334}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -219,15 +252,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2480}
+      Script: {instanceID: 2342}
     - Class: 114
-      Script: {instanceID: 3002}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 4604}
+      Script: {instanceID: 4468}
     - Class: 114
-      Script: {instanceID: 5014}
+      Script: {instanceID: 4880}
     - Class: 114
-      Script: {instanceID: 5916}
+      Script: {instanceID: 5782}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -995,10 +1028,16 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeathScreen
   platform: 19
   scenePathNames:
   - Assets/gamemenue.unity
   - Assets/rooftoprunner.unity
   - Assets/creditmenu.unity
   - Assets/DeathScreen.unity
-  playerPath: C:/New folder/Runner.exe
+  playerPath: C:/sgbfuyewrguyilkfgawe/Runner.exe
